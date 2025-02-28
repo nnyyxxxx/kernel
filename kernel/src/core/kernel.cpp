@@ -42,8 +42,8 @@ extern "C" void kernel_main() {
     }
 
     constexpr size_t MEMORY_START = 0x100000;
-    constexpr size_t MEMORY_SIZE = 64 * 1024 * 1024;
-    constexpr size_t HEAP_SIZE = 16 * 1024 * 1024;
+    constexpr size_t MEMORY_SIZE = 512 * 1024 * 1024;
+    constexpr size_t HEAP_SIZE = 128 * 1024 * 1024;
 
     auto& pmm = PhysicalMemoryManager::instance();
     pmm.initialize(MEMORY_START, MEMORY_SIZE);
